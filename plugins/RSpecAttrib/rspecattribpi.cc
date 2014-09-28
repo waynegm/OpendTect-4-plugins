@@ -12,30 +12,30 @@
  ________________________________________________________________________
 
  Author:        Wayne Mogg
- Date:          April 2014
+ Date:          August 2014
  ________________________________________________________________________
  
  -*/
 
-#include "ltfattrib.h"
+#include "rspecattrib.h"
 #include "odplugin.h"
 
 
-mDefODPluginEarlyLoad(LTFAttrib)
-mDefODPluginInfo(LTFAttrib)
+mDefODPluginEarlyLoad(RSpecAttrib)
+mDefODPluginInfo(RSpecAttrib)
 {
 	static PluginInfo retpi = {
-		"Local Time-Frequency Attribute v4 (base)",
+		"Recursive spectral decomposition attribute v4 (base)",
 		"Wayne Mogg",
 		"4.0",
-		"Time-Frequency decomposition using local attibutes for OpendTect v4" };
+		"Recursive spectral decomposition for OpendTect v4" };
 	return &retpi;
 }
 
 
-mDefODInitPlugin(LTFAttrib)
+mDefODInitPlugin(RSpecAttrib)
 {
-    Attrib::LTFAttrib::initClass();
+    Attrib::RSpecAttrib::initClass();
 
     return 0;
 }
