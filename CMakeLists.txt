@@ -22,9 +22,9 @@ find_package( OpendTect )
 
 #Setup the modules
 set ( PLUGINS AVOAttrib uiAVOAttrib 
-	      LTFAttrib uiLTFAttrib 
 	      MLVFilterAttrib uiMLVFilterAttrib 
-	      RSpecAttrib uiRSpecAttrib )
+	      RSpecAttrib uiRSpecAttrib
+	      LTFAttrib uiLTFAttrib )
 OD_ADD_MODULES( plugins ${PLUGINS} )
 
 #Add the plugins
