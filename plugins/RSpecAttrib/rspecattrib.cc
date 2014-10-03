@@ -123,7 +123,7 @@ void RSpecAttrib::computeFilterTaps(float freq, Array1DImpl<float_complex>& num,
 	float refstep = getRefStep();
 	float dfreq = 1.0f/window_;  
 	int km1 = order_-1;
-	float sigma_p = (sqrt(dfreq)*myMath::factorial(km1))/(sqrt(2.0 * M_PIf * refstep)*pow(km1,km1)*exp(-km1));
+	float sigma_p = (sqrt(dfreq)*myMath::factorial(km1))/(sqrt(2.0 * M_PIf * refstep)*pow((float)km1,km1)*exp((float)-km1));
 	float omega = 2.0 * M_PIf * freq;
 	float_complex p(-sigma_p, omega);
 	float_complex a = exp(p*refstep);
